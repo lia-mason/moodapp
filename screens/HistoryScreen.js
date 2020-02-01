@@ -2,7 +2,7 @@ import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 
-export default function LinksScreen() {
+export default function HistoryScreen() {
   return (
     <ScrollView style={styles.container}>
       {/**
@@ -14,8 +14,8 @@ export default function LinksScreen() {
   );
 }
 
-LinksScreen.navigationOptions = {
-  title: 'Links',
+HistoryScreen.navigationOptions = {
+  title: 'History',
 };
 
 const styles = StyleSheet.create({
