@@ -44,7 +44,7 @@ const LinksStack = createStackNavigator(
 );
 
 LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+  tabBarLabel: 'History',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
   ),
@@ -52,26 +52,9 @@ LinksStack.navigationOptions = {
 
 LinksStack.path = '';
 
-const SettingsStack = createStackNavigator(
-  {
-    Settings: SettingsScreen,
-  },
-  config
-);
-
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
-  ),
-};
-
-SettingsStack.path = '';
-
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   LinksStack,
-  SettingsStack,
 });
 
 tabNavigator.path = '';
