@@ -11,45 +11,58 @@ import {
 } from 'react-native';
 import { TextInput} from 'react-native-paper';
 
-
 import { MonoText } from '../components/StyledText';
 
-export default function HomeScreen() {
-  return (
-    <View style={styles.container}>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
-        <View style={styles.welcomeContainer}>
+export default class HomeScreen extends React.Component {
+
+  state = {
+    text: ''
+  };
+
+  render(){
+    return (
+      <View style={styles.container}>
+        <ScrollView
+          style={styles.container}
+          contentContainerStyle={styles.contentContainer}>
+          <View style={styles.welcomeContainer}>
+          </View>
+
+          <View style={styles.getStartedContainer}>
+
+            <Text style={styles.getStartedText}>Hello Lia!</Text>
+
+          </View>
+
+          <View style={styles.questionContainer}>
+
+            <Text style={styles.questionText}>How are you feeling?</Text>
+
+          </View>
+
+          <View style={{flex:1}}>
+         
+          <View style={styles.textboxContainer}>
+
+          <TextInput
+                style={{paddingVertical:50}, {paddingHorizontal:20}}
+                selectionColor='#00CC99'
+                underlineColor='#00CC99'
+                mode='outlined'
+                placeholder=''
+                value={this.state.text}
+                onChangeText={text => this.setState({ text })}
+                multiline='true'
+            />
+
+          </View>
+
+          </View>
+          
+        </ScrollView>
         </View>
-
-        <View style={styles.getStartedContainer}>
-
-          <Text style={styles.getStartedText}>Hello Lia!</Text>
-
-        </View>
-
-        <View style={styles.questionContainer}>
-
-          <Text style={styles.questionText}>How are you feeling?</Text>
-
-        </View>
-
-        <View style={{flex:1}}>
-
-        <TextInput
-              style={{paddingVertical:50}}
-              mode='outlined'
-              placeholder='Add item'
-              value={this.state.text}
-              onChangeText={text => this.setState({ text })}
-          />
-
-        </View>
-        
-      </ScrollView>
-      </View>
-  );
+    );
+  }
 }
 
 HomeScreen.navigationOptions = {
@@ -72,6 +85,10 @@ const styles = StyleSheet.create({
     paddingTop: 0,
   },
   questionContainer: {
+    flex:1,
+    paddingTop: 40,
+  },
+  textboxContainer: {
     flex:1,
     paddingTop: 40,
   },
