@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { TextInput} from 'react-native-paper';
 
 
 import { MonoText } from '../components/StyledText';
@@ -32,7 +33,19 @@ export default function HomeScreen() {
 
           <Text style={styles.questionText}>How are you feeling?</Text>
 
-       </View>
+        </View>
+
+        <View style={{flex:1}}>
+
+        <TextInput
+              style={{paddingVertical:50}}
+              mode='outlined'
+              placeholder='Add item'
+              value={this.state.text}
+              onChangeText={text => this.setState({ text })}
+          />
+
+        </View>
         
       </ScrollView>
       </View>
@@ -60,7 +73,7 @@ const styles = StyleSheet.create({
   },
   questionContainer: {
     flex:1,
-    paddingTop: 20,
+    paddingTop: 40,
   },
   welcomeContainer: {
     alignItems: 'center',
@@ -81,7 +94,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#00CC99',
     height : 100,
     justifyContent: 'center',
-    paddingTop: 15,
+    paddingTop: 20,
   },
   homeScreenFilename: {
     marginVertical: 7,
@@ -101,11 +114,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   questionText: {
-    fontSize: 20,
+    fontSize: 30,
     color: 'black',
     lineHeight: 0,
-    textAlign: 'left',
-    paddingHorizontal: 15
+    textAlign: 'center',
+    paddingHorizontal: 0
   },
   tabBarInfoContainer: {
     position: 'absolute',
