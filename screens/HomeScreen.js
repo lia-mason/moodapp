@@ -24,18 +24,17 @@ export default function HomeScreen() {
 
         <View style={styles.getStartedContainer}>
 
-          <Text style={styles.getStartedText}>Hello ___ !</Text>
+          <Text style={styles.getStartedText}>Hello Lia!</Text>
 
         </View>
+
+        <View style={styles.questionContainer}>
+
+          <Text style={styles.questionText}>How are you feeling?</Text>
+
+       </View>
         
       </ScrollView>
-
-        <View
-          style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-          <MonoText style={styles.codeHighlightText}>
-            navigation/MainTabNavigator.js
-          </MonoText>
-        </View>
       </View>
   );
 }
@@ -51,18 +50,22 @@ const styles = StyleSheet.create({
   },
   developmentModeText: {
     marginBottom: 20,
-    color: 'rgba(0,0,0,0.4)',
+    color: '#00CC99',
     fontSize: 14,
     lineHeight: 19,
     textAlign: 'center',
   },
   contentContainer: {
-    paddingTop: 30,
+    paddingTop: 0,
+  },
+  questionContainer: {
+    flex:1,
+    paddingTop: 20,
   },
   welcomeContainer: {
     alignItems: 'center',
-    marginTop: 10,
-    marginBottom: 20,
+    marginTop: 0,
+    marginBottom: 0,
   },
   welcomeImage: {
     width: 100,
@@ -73,24 +76,36 @@ const styles = StyleSheet.create({
   },
   getStartedContainer: {
     alignItems: 'center',
-    marginHorizontal: 50,
+    marginHorizontal: 0,
+    flex : 1/6,
+    backgroundColor: '#00CC99',
+    height : 100,
+    justifyContent: 'center',
+    paddingTop: 15,
   },
   homeScreenFilename: {
     marginVertical: 7,
   },
   codeHighlightText: {
-    color: 'rgba(96,100,109, 0.8)',
+    color: '#00CC99',
   },
   codeHighlightContainer: {
-    backgroundColor: 'rgba(0,0,0,0.05)',
+    backgroundColor: '#00CC99',
     borderRadius: 3,
     paddingHorizontal: 4,
   },
   getStartedText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
+    fontSize: 30,
+    color: 'white',
+    lineHeight: 28,
     textAlign: 'center',
+  },
+  questionText: {
+    fontSize: 20,
+    color: 'black',
+    lineHeight: 0,
+    textAlign: 'left',
+    paddingHorizontal: 15
   },
   tabBarInfoContainer: {
     position: 'absolute',
@@ -114,7 +129,7 @@ const styles = StyleSheet.create({
   },
   tabBarInfoText: {
     fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
+    color: '#00CC99',
     textAlign: 'center',
   },
   navigationFilename: {
@@ -129,6 +144,6 @@ const styles = StyleSheet.create({
   },
   helpLinkText: {
     fontSize: 14,
-    color: '#2e78b7',
+    color: '#00CC99',
   },
 });

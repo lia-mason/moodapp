@@ -16,6 +16,7 @@ export default function HistoryScreen() {
 
 HistoryScreen.navigationOptions = {
   title: 'History',
+  color: '#00CC99'
 };
 
 const styles = StyleSheet.create({
