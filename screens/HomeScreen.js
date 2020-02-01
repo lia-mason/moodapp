@@ -10,6 +10,7 @@ import {
   View,
 } from 'react-native';
 import { TextInput} from 'react-native-paper';
+import Smile from './smile.png';
 
 import { MonoText } from '../components/StyledText';
 
@@ -44,21 +45,28 @@ export default class HomeScreen extends React.Component {
          
           <View style={styles.textboxContainer}>
 
-          <TextInput
-                style={{paddingVertical:50}, {paddingHorizontal:20}}
-                selectionColor='#00CC99'
-                underlineColor='#00CC99'
-                mode='outlined'
-                placeholder=''
-                value={this.state.text}
-                onChangeText={text => this.setState({ text })}
-                multiline='true'
-            />
-
-          </View>
-
-          </View>
+            <TextInput
+                  style={{paddingVertical:50}, {paddingHorizontal:20}}
+                  selectionColor='#00CC99'
+                  underlineColor='#00CC99'
+                  theme={{ colors: { primary: '#006666',underlineColor:'transparent',}}}
+                  mode='outlined'
+                  placeholder=''
+                  value={this.state.text}
+                  onChangeText={text => this.setState({ text })}
+                  multiline='true'
+              />
           
+          </View>
+
+          <View style={styles.imageContainer}>
+
+            <Image source={require('./smile.png')} style={{width: 200, height: 200}}/>
+
+          </View>
+
+          </View>
+
         </ScrollView>
         </View>
     );
@@ -97,12 +105,20 @@ const styles = StyleSheet.create({
     marginTop: 0,
     marginBottom: 0,
   },
+  imageContainer: {
+    alignItems: 'center',
+    marginTop: 70,
+    marginBottom: 0,
+  },
   welcomeImage: {
     width: 100,
     height: 80,
     resizeMode: 'contain',
-    marginTop: 3,
-    marginLeft: -10,
+    marginTop: 0,
+    marginLeft: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingLeft: 50
   },
   getStartedContainer: {
     alignItems: 'center',
