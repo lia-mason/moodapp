@@ -128,6 +128,9 @@ const styles = StyleSheet.create({
     height : 100,
     justifyContent: 'center',
     paddingTop: 20,
+    shadowOffset:{  width: 0,  height: 5,  },
+    shadowColor: 'black',
+    shadowOpacity: 0.2,
   },
   homeScreenFilename: {
     marginVertical: 7,
