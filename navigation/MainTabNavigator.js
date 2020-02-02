@@ -24,8 +24,9 @@ const HomeStack = createStackNavigator(
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
   tabBarOptions: { 
-    activeTintColor: '#006666',
-    inactiveTintColor: '#006666',
+    activeTintColor: '#696969',
+    inactiveTintColor: '#696969',
+    style:{height:60}
   },
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -45,8 +46,9 @@ const LinksStack = createStackNavigator(
 LinksStack.navigationOptions = {
   tabBarLabel: 'History',
   tabBarOptions: { 
-    activeTintColor: '#006666',
-    inactiveTintColor: '#006666',
+    activeTintColor: '#696969',
+    inactiveTintColor: '#696969',
+    style:{height:60}, 
   },
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-clock' : 'ios-clock'} />

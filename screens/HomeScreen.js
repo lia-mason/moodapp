@@ -49,7 +49,7 @@ export default class HomeScreen extends React.Component {
                   style={{paddingVertical:50}, {paddingHorizontal:20}}
                   selectionColor='#00CC99'
                   underlineColor='#00CC99'
-                  theme={{ colors: { primary: '#006666',underlineColor:'transparent',}}}
+                  theme={{ colors: { primary: '#696969',underlineColor:'transparent',}}}
                   mode='outlined'
                   placeholder=''
                   value={this.state.text}
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     alignItems: 'center',
-    marginTop: 70,
+    marginTop: 65,
     marginBottom: 0,
   },
   welcomeImage: {
