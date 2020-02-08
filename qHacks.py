@@ -276,7 +276,7 @@ class convo:
 #need function to generate recommendations to improve mood!!!!!!!!!!!!
 
 def main():
-    os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="nodal-alcove-265318-9c7023a7e9c1.json"
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="credentials"
     #language_code = 'en-US'
 
 
